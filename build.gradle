@@ -1,0 +1,56 @@
+plugins {
+	id 'java'
+	id 'eclipse'
+	id 'org.springframework.boot' version '3.2.5'
+	id 'io.spring.dependency-management' version '1.1.4'
+	id 'org.graalvm.buildtools.native' version '0.9.28'
+}
+
+group = 'com.eloyleonardo.javet'
+version = '0.0.1-SNAPSHOT'
+
+java {
+	sourceCompatibility = '21'
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+	implementation 'com.caoccao.javet:javet-macos:3.1.1'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+	jvmArgs '-agentlib:native-image-agent=config-output-dir=src/main/resources/META-INF/native-image'
+}
+
+eclipse.classpath.file.whenMerged {
+	entries.removeAll { it.kind == 'lib' && !new File(it.path).exists() }
+}
+
+graalvmNative {
+    binaries {
+        main {
+            buildArgs.addAll([
+                '-Djavet.lib.loading.path=/Users/leonardo/tmp/javet-macos-3.1.1/41613/', 
+                '-Djavet.lib.loading.type=custom', 
+                '-H:+ReportExceptionStackTraces',
+                '-H:Name=my-native-binary',
+                '--verbose'
+            ])
+        }
+        test {
+            buildArgs.addAll([
+                '-Djavet.lib.loading.path=/Users/leonardo/tmp/javet-macos-3.1.1/41613/', 
+                '-Djavet.lib.loading.type=custom', 
+                '-H:+ReportExceptionStackTraces',
+                '--verbose'
+            ])
+        }
+    }
+}
