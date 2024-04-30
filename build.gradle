@@ -10,7 +10,7 @@ group = 'com.eloyleonardo.javet'
 version = '0.0.1-SNAPSHOT'
 
 java {
-	sourceCompatibility = '21'
+	sourceCompatibility = '17'
 }
 
 repositories {
@@ -22,11 +22,14 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
 	implementation 'com.caoccao.javet:javet-macos:3.1.1'
+	
+	// https://mvnrepository.com/artifact/com.google.guava/guava
+	implementation 'com.google.guava:guava:33.1.0-jre'
 }
 
 tasks.named('test') {
 	useJUnitPlatform()
-//	jvmArgs '-agentlib:native-image-agent=config-output-dir=src/main/resources/META-INF/native-image'
+	// jvmArgs '-agentlib:native-image-agent=config-output-dir=src/main/resources/META-INF/native-image,experimental-class-define-support'
 }
 
 eclipse.classpath.file.whenMerged {
@@ -41,6 +44,13 @@ graalvmNative {
                 '-Djavet.lib.loading.type=custom', 
                 '-H:+ReportExceptionStackTraces',
                 '-H:Name=my-native-binary',
+                '-H:+UnlockExperimentalVMOptions',
+                '-H:+AllowIncompleteClasspath',
+                '-H:+SupportPredefinedClasses',
+                '-H:+ReportUnsupportedElementsAtRuntime',
+                '-H:+LogVerbose',
+                '-H:+TraceVMOperations',
+                '-H:TraceClassInitialization=com.caoccao.javet',
                 '--verbose'
             ])
         }

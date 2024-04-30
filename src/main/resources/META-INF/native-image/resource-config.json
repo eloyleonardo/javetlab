@@ -21,23 +21,7 @@
   }, {
     "pattern":"\\QMETA-INF/services/java.util.spi.ResourceBundleControlProvider\\E"
   }, {
-    "pattern":"\\QMETA-INF/services/javax.xml.transform.TransformerFactory\\E"
-  }, {
     "pattern":"\\QMETA-INF/services/org.apache.juli.logging.Log\\E"
-  }, {
-    "pattern":"\\QMETA-INF/services/org.assertj.core.configuration.Configuration\\E"
-  }, {
-    "pattern":"\\QMETA-INF/services/org.assertj.core.presentation.Representation\\E"
-  }, {
-    "pattern":"\\QMETA-INF/services/org.junit.platform.engine.TestEngine\\E"
-  }, {
-    "pattern":"\\QMETA-INF/services/org.junit.platform.launcher.LauncherDiscoveryListener\\E"
-  }, {
-    "pattern":"\\QMETA-INF/services/org.junit.platform.launcher.LauncherSessionListener\\E"
-  }, {
-    "pattern":"\\QMETA-INF/services/org.junit.platform.launcher.PostDiscoveryFilter\\E"
-  }, {
-    "pattern":"\\QMETA-INF/services/org.junit.platform.launcher.TestExecutionListener\\E"
   }, {
     "pattern":"\\QMETA-INF/services/org.slf4j.spi.SLF4JServiceProvider\\E"
   }, {
@@ -77,10 +61,6 @@
   }, {
     "pattern":"\\Qcom/eloyleonardo/javet/javetlab/JavetV8Controller.class\\E"
   }, {
-    "pattern":"\\Qcom/eloyleonardo/javet/javetlab/JavetlabApplicationTests-context.xml\\E"
-  }, {
-    "pattern":"\\Qcom/eloyleonardo/javet/javetlab/JavetlabApplicationTestsContext.groovy\\E"
-  }, {
     "pattern":"\\Qcom/eloyleonardo/javet/javetlab/\\E"
   }, {
     "pattern":"\\Qconfig/application-default.properties\\E"
@@ -102,10 +82,6 @@
     "pattern":"\\Qgit.properties\\E"
   }, {
     "pattern":"\\Qjndi.properties\\E"
-  }, {
-    "pattern":"\\Qjunit-platform.properties\\E"
-  }, {
-    "pattern":"\\Qlibjavet-v8-macos-arm64.v.3.1.1.dylib\\E"
   }, {
     "pattern":"\\Qlogback-spring.groovy\\E"
   }, {
@@ -129,24 +105,6 @@
   }, {
     "pattern":"\\Qmessages.properties\\E"
   }, {
-    "pattern":"\\Qmockito-extensions/org.mockito.plugins.AnnotationEngine\\E"
-  }, {
-    "pattern":"\\Qmockito-extensions/org.mockito.plugins.DoNotMockEnforcer\\E"
-  }, {
-    "pattern":"\\Qmockito-extensions/org.mockito.plugins.InstantiatorProvider2\\E"
-  }, {
-    "pattern":"\\Qmockito-extensions/org.mockito.plugins.MemberAccessor\\E"
-  }, {
-    "pattern":"\\Qmockito-extensions/org.mockito.plugins.MockMaker\\E"
-  }, {
-    "pattern":"\\Qmockito-extensions/org.mockito.plugins.MockResolver\\E"
-  }, {
-    "pattern":"\\Qmockito-extensions/org.mockito.plugins.MockitoLogger\\E"
-  }, {
-    "pattern":"\\Qmockito-extensions/org.mockito.plugins.PluginSwitch\\E"
-  }, {
-    "pattern":"\\Qmockito-extensions/org.mockito.plugins.StackTraceCleanerProvider\\E"
-  }, {
     "pattern":"\\Qorg/apache/catalina/core/RestrictedFilters.properties\\E"
   }, {
     "pattern":"\\Qorg/apache/catalina/core/RestrictedListeners.properties\\E"
@@ -158,20 +116,6 @@
     "pattern":"\\Qorg/apache/catalina/util/CharsetMapperDefault.properties\\E"
   }, {
     "pattern":"\\Qorg/apache/catalina/util/ServerInfo.properties\\E"
-  }, {
-    "pattern":"\\Qorg/json/JSONObject.class\\E"
-  }, {
-    "pattern":"\\Qorg/mockito/internal/creation/bytebuddy/MockMethodAdvice$ForEquals.class\\E"
-  }, {
-    "pattern":"\\Qorg/mockito/internal/creation/bytebuddy/MockMethodAdvice$ForHashCode.class\\E"
-  }, {
-    "pattern":"\\Qorg/mockito/internal/creation/bytebuddy/MockMethodAdvice$ForStatic.class\\E"
-  }, {
-    "pattern":"\\Qorg/mockito/internal/creation/bytebuddy/MockMethodAdvice.class\\E"
-  }, {
-    "pattern":"\\Qorg/mockito/internal/creation/bytebuddy/inject/MockMethodDispatcher.raw\\E"
-  }, {
-    "pattern":"\\Qorg/slf4j/impl/StaticLoggerBinder.class\\E"
   }, {
     "pattern":"\\Qorg/springframework/aot/hint/annotation/Reflective.class\\E"
   }, {
