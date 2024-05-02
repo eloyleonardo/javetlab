@@ -6,11 +6,24 @@ plugins {
 	id 'org.graalvm.buildtools.native' version '0.9.28'
 }
 
-group = 'com.eloyleonardo.javet'
+group = 'com.eloyleonardo.javet.javetlab'
 version = '0.0.1-SNAPSHOT'
 
 java {
 	sourceCompatibility = '17'
+}
+
+springBoot {
+  mainClass = 'com.eloyleonardo.javet.javetlab.JavetlabApplication'
+}
+
+
+bootJar {
+	duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+
+    from('dylibs') {
+        into ''
+    }
 }
 
 repositories {
